@@ -1,0 +1,37 @@
+@import '../../../styles/font';
+
+.landing-section-root {
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F7Fa;
+
+    .hero {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-weight: 400;
+    }
+
+    .hero p {
+        color: $grey-500;
+    }
+
+    .steps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .next-image {
+        width: 40px;
+        height: auto;
+        align-self: center;
+    }
+
+    .upload-container {
+        width: 300px;
+        margin: auto;
+    }
+}

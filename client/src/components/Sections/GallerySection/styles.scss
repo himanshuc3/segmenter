@@ -1,0 +1,16 @@
+.image-grid-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & img {
+        width: 50%;
+        height: auto;
+    }
+
+    .gallery-section {
+        // padding: 0 100px;
+    }
+}

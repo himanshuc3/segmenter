@@ -1,0 +1,18 @@
+.section-header {
+    display: inline-block;
+
+    h2 {
+        position: relative;
+        z-index: 20;
+
+    }
+
+    .underline {
+        width: 100%;
+        height: 10px;
+        background: rgba(255, 0, 0, 0.6);
+        position: relative;
+        top: -30px;
+        z-index: 1;
+    }
+}
