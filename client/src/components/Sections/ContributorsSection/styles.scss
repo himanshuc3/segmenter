@@ -1,0 +1,57 @@
+@import '../../../styles/font';
+
+
+.contributors-root{
+    background-color: $grey-400;
+    padding: 50px 100px;
+}
+
+.contributors-list{
+    display: flex;
+    margin-top: 50px;
+    & > .contributor-image{
+        margin-right: 40px;
+    }
+    img{
+        width: 94px;
+        height: 94px;
+        border-radius: 40px;
+    }
+}
+
+.project-meta{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    .contributor-btn{
+        all: unset;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+         & > p{
+        border-radius: 40px;
+
+            border:1px solid red;
+            padding: 10px 50px;
+            font-size: 1.5rem;
+            margin: 0;
+
+
+
+         }
+         & > span{
+            // padding: 20px;
+            padding: 0 20px 0 15px;
+         }
+    }
+
+
+    & > img{
+        margin-left: 40px;
+        display: inline-block;
+        width: auto;
+        height: 40px;
+    }
+}

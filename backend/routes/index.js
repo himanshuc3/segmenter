@@ -1,5 +1,6 @@
 var express = require('express');
 var sharp = require('sharp')
+var multer = require('multer')
 var router = express.Router();
 
 
@@ -16,7 +17,7 @@ const upload = multer({
 })
 
 /* GET home page. */
-router.post('/image', upoad.single('upload'), async (req, res, next) => {
+router.post('/image', upload.single('upload'), async (req, res, next) => {
   try {
     await sharp(req.file.buffer).resize({ width: 1920, height: 1080 })
       .png()
