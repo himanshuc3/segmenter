@@ -1,6 +1,7 @@
 import React from 'react';
 import { Upload } from 'antd';
-import { CloudUploadOutlined } from '@ant-design/icons'
+import axios from 'axios';
+import { CloudUploadOutlined, InfoCircleFilled } from '@ant-design/icons'
 
 import './styles.scss';
 import StepCard from '../../StepCard';
@@ -10,6 +11,31 @@ const { Dragger } = Upload
 
 function LandingSection(props) {
 
+    async function onChange(info) {
+        const { status } = info.file
+        console.log(status)
+        if (status === 'done') {
+            console.log(info)
+            const formData = new FormData();
+            formData.append("segment", info.file.originFileObj)
+            await axios({
+                method: "post",
+                url: "http://localhost:4000/image",
+                data: formData,
+                headers: {
+                    "Content-Type": "multipart/form-data"
+                }
+            }).then((resp) => {
+                console.log('response:', resp)
+            })
+        }
+    }
+
+    function dummyRequest({ file, onSuccess }) {
+        setTimeout(() => {
+            onSuccess("ok");
+        }, 0);
+    };
 
 
     return (
@@ -52,7 +78,7 @@ function LandingSection(props) {
             </div>
             <div className='upload-container'>
 
-                <Dragger className='uploader'>
+                <Dragger className='uploader' onChange={onChange} customRequest={dummyRequest}>
                     <h3>Upload your image</h3>
                     <p>only PNG images of 1920x1080
                         resolution are allowed</p>

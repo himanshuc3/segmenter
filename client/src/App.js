@@ -12,6 +12,7 @@ function App() {
       <LandingSection />
       <GallerySection />
       <ContributorsSection />
+      <p className='copyright-text'>Made with 💜 <span>/</span> stackoverflow threads</p>
     </div>
   );
 }

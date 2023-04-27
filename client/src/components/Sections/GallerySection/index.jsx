@@ -6,6 +6,7 @@ import './styles.scss'
 
 function GallerySection(props) {
 
+
     const images = [
         {
             name: 'Martin Cola',
@@ -32,7 +33,7 @@ function GallerySection(props) {
     return (
         <div className='gallery-section'>
             <Title text="gallery" serial="1" />
-            <p>History of terrain images segmented, classified stored in our database.
+            <p className='help-text'>History of terrain images segmented, classified stored in our database.
                 Given we have a limited capacity, this would be showing recent few images
                 uploaded by users.</p>
 

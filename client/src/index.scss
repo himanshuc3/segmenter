@@ -3,4 +3,17 @@
   // margin: auto;
   display: flex;
   flex-direction: column;
+
+  .copyright-text {
+    text-align: center;
+
+    &>span {
+      display: inline-block;
+      margin-left: -17px;
+      margin-right: 7px;
+
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
 }

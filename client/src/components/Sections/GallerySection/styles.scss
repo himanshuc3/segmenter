@@ -3,14 +3,30 @@
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
-    gap: 10px;
+    // gap: 10px;
+
+    &>div {
+        width: 50%;
+        padding: 10px;
+        overflow: hidden;
+    }
 
     & img {
-        width: 50%;
+        width: 100%;
         height: auto;
     }
 
-    .gallery-section {
-        // padding: 0 100px;
+
+
+
+}
+
+.gallery-section {
+    padding: 50px 100px;
+
+    .help-text {
+        font-size: 1.4rem;
+        word-spacing: 3px;
+
     }
 }
